@@ -1,0 +1,345 @@
+head {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background: #F0F0F0;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-size: 10px;
+}
+
+.main-wrapper {
+  background: #f3f3f3;
+  min-width: 900px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.promo {
+  position: relative;
+  color: #ffffff;
+  background-image: url("../img/sample2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 90vh;
+  margin: 0px auto;
+}
+
+.login {
+  position: absolute;
+  top: 40px;
+  right: 45px;
+}
+
+.login a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.login a:visited {
+  color: #ffffff;
+}
+
+.logo-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.logo-small {
+  position: absolute;
+  left: 45px;
+  top: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.logo {
+  font-size: 40px;
+  letter-spacing: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.logo span {
+  font-size: 75px;
+}
+
+.slogan {
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  top: 80%;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.show-more-btn, .about-btn, .careers-btn {
+  padding: 12px 55px;
+  text-decoration: none;
+  border: 1px solid #ffffff;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  text-align: center;
+
+}
+
+#about {
+  position: relative;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+}
+
+#about .left {
+  font-size: 13px;
+  position: absolute;
+  width: 310px;
+  left: 40px;
+  z-index: 20000;
+  top: 80px;
+}
+
+#about .right {
+  position: absolute;
+  z-index: 2000;
+  color: #ffffff;
+  right: 40px;
+  width: 600px;
+}
+
+#about::before {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 200px 0px 0px 1600px;
+  border-color: #000000 transparent;
+}
+/*Post list*/
+
+.post-list-title {
+  margin: 10px;
+  text-align: center;
+}
+
+.post-list {
+  display: flex;
+}
+
+article {
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+article:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+article .description {
+  position: relative;
+  flex: 1 0 0;
+  flex-basis: 50%;
+  align-content: center;
+}
+
+.description h4 {
+  text-align: center;
+  padding: 30px 0 20px 110px;
+}
+
+.img-sample {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-sample:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to top,#343638,transparent);
+  opacity: .6;
+}
+
+.post-date {
+  position: absolute;
+  bottom: 13px;
+  left: 10px;
+  color: #ffffff;
+}
+
+.likes {
+  border: 2px solid #ffffff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 7px;
+  color: #ffffff;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.font-bold {
+  font-weight: 800;
+}
+
+.font-regular {
+  font-style: normal;
+  font-weight: 400;
+}
+
+#explore {
+  display: flex;
+  background-color: #ffffff;
+  height: 260px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about-explore {
+  width: 200px;
+  box-shadow: 0 2px 5px #888;
+  padding: 20px;
+  height: 80px;
+  display: block;
+}
+
+.explore-btn {
+  font-size: 10px;
+  margin: 10px 0;
+  background-color: #097774;
+  color: #ffffff;
+  border: none;
+  height: 30px;
+  width: 100%;
+}
+/*subscribe*/
+
+#subscribe {
+  background-color: #f3f3f3;
+  height: 100px;
+  padding: 45px 20px 0px 20px;
+}
+
+#subscribe .about-subscribe {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+#subscribe .about-subscribe label {
+  font-size: 15px;
+}
+
+#subscribe label {
+  padding: 10px;
+}
+
+.form-control, .form-control2 {
+  font-size: 10px;
+  float: left;
+  background-color: #f3f3f3;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 3px 10px;
+  height: 20px;
+  width: 96px;
+}
+
+.send-btn, .send-btn2 {
+  font-size: 10px;
+  margin: 0 5px;
+  background-color: #097774;
+  color: #f0f0f0;
+  border: none;
+  height: 28px;
+  width: 62px;
+}
+
+input::placeholder {
+  color:#000000;
+}
+
+.clear {
+  clear: both;
+}
+
+.footer-wrapper {
+  display: flex;
+  background-color: #ffffff;
+  padding: 80px 30px;
+}
+
+.footer-wrapper > .black, .contact, .last-tweet, .newsletter {
+  flex: 1 0 0;
+  margin: 20px;
+  text-align: justify;
+}
+
+.light {
+  color: #E8E8E8;
+}
+
+
+.tweet {
+  color: #9E9E9E;
+  padding: 17px 0px 3px;
+  line-height: 14px;
+}
+
+.end-wrapper {
+  background-color: #ffffff;
+  padding: 20px 45px;
+}
+
+.end {
+  border-top: 1px solid #E8E8E8;
+  padding-top: 10px;
+}
+
+.footer-wrapper2 {
+  color: #9E9E9E;
+}
+
+.menu2 {
+  float: right;
+  word-spacing: 10px;
+}
+
+.menu2 a {
+  color: #000000;
+  text-decoration: none;
+}
