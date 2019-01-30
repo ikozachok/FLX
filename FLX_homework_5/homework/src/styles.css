@@ -11,7 +11,9 @@
 }
 
 body {
+  color: #fff;
   font-family: roboto;
+  background: #0b192f;
 }
 .post-1 {
 	background: #B71757;
@@ -30,3 +32,137 @@ body {
 }
 
 /* Your styles go here */
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.header {
+  background: #162b4d
+}
+.color-red {
+  color: #B71757;
+}
+h1 {
+  font-weight: 200;
+  font-size: 38px;
+  margin: 50px 50px 0;
+}
+h2 {
+  font-size: 48px;
+  font-weight: 200;
+}
+h3 {
+  color: #162b4d;
+  font-size: 27px;
+  font-weight: 200;
+}
+.text,
+.text-2,
+.text-right,
+.post-description {
+  color: #b8b8b8;
+  font-weight: 200;
+}
+.main {
+  padding: 0 10px;
+}
+.menu {
+  display: none;
+}
+.hamburger {
+  width: 12px;
+  height: 2px;
+  background-color: #fff;
+  margin: 1px 0;
+}
+.header {
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  margin: 0 0 20px;
+  padding: 46px 10px;
+  align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .main-wrapper {
+    position: relative;
+  }
+  .title {
+    padding: 30px;
+  }
+  .text {
+    font-size: 15px;
+    padding: 0 30px;
+    line-height: 20px;
+  }
+  .day {
+    font-size: 55px;
+    margin: 0 180px 0 180px;
+  }
+  .post-description {
+    padding: 35px 0 20px;
+    font-size: 25px;
+    text-align: center;
+  }
+  .news-1,
+  .news-2 {
+    background: #fff;
+  }
+  .title-2 {
+    padding: 20px 30px 0;
+  }
+  .text-2 {
+    font-size: 15px;
+    padding: 10px 30px 30px;
+    line-height: 20px;
+  }
+  #contact {
+    line-height: 25px;
+    background: #162b4d;
+    text-align: center;
+    margin: 35px 0 5px;
+    padding: 40px 10px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .main-wrapper {
+    display: flex;;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .main {
+    position: relative;
+    margin: 0 auto;
+  }
+  .menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .menu a:hover {
+    color: #b8b8b8;
+  }
+  article {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 5px 0;
+    padding: 0 80px;
+  }
+  article:nth-child(odd) {
+    flex-direction: row;
+  }
+  img {
+    width: 50%;
+  }
+}
