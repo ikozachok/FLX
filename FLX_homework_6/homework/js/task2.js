@@ -1,5 +1,5 @@
-const amount = parseFloat(prompt('Enter amount of money', 0));
-const discount = parseFloat(prompt('Enter discount', 0));
+const amount = parseFloat(prompt('Please enter price', 0));
+const discount = parseFloat(prompt('Please enter discount', 0));
 
 if (amount >= 0 && discount <= 100) {
   const total = Math.round(amount * (1 - discount/100) * 100)/100;
