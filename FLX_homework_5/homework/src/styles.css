@@ -2,24 +2,30 @@ body {
   color: #fff;
   font-family: roboto;
   background: #0b192f;
+  font-size: 1.2vw;
 }
-.post-1 {
+.image-wrapper {
+  flex: 1;
+}
+.image-wrapper:hover {
+  cursor: pointer;
+  filter: opacity(50%);
+}
+.pink {
+  flex: 1;
 	background: #B71757;
 }
-.post-2 {
+.lasure {
 	background: #0D7E71;
 }
-.post-3 {
+.orange {
 	background: #b1660e;
 }
-.post-4 {
+.red {
 	background: #d12767;
 }
-.post-5 {
+.blue {
 	background: #2d95bb;
-}
-img {
-  width: 100%;
 }
 a {
   text-decoration: none;
@@ -30,84 +36,97 @@ a {
   margin: 0;
 }
 .header {
-  background: #162b4d
+  background: #162b4d;
+  margin-bottom: 15px;
 }
 .color-red {
   color: #B71757;
 }
 h1 {
   font-weight: 200;
-  font-size: 38px;
-  margin: 50px 50px 0;
+  font-size: 3vw;
 }
 h2 {
-  font-size: 48px;
+  font-size: 4.2vw;
   font-weight: 200;
 }
 h3 {
   color: #162b4d;
-  font-size: 27px;
+  font-size: 2.4vw;
   font-weight: 200;
 }
 .text,
 .text-2,
 .text-right,
 .post-description {
-  color: #b8b8b8;
+  filter: opacity(50%);
   font-weight: 200;
 }
 .main {
   padding: 0 10px;
 }
 .hamburger {
+  margin-bottom: 20px;
+}
+.hamburger div {
   width: 12px;
-  height: 2px;
+  height: 1px;
   background-color: #fff;
-  margin: 1px 0;
+  margin: 4px;
 }
 .header {
-  flex-direction: column;
   display: flex;
-  text-align: center;
-  margin: 0 0 20px;
-  padding: 46px 10px;
   align-items: center;
+  justify-content: space-between;
+  padding: 0px 60px 0px 20px;
 }
 .title {
   padding: 30px;
 }
 .text {
-  font-size: 15px;
   padding: 0 30px;
-  line-height: 20px;
+  line-height: 25px;
 }
 .day {
-  font-size: 55px;
-  margin: 0 180px 0 180px;
+  font-size: 4.5vw;
 }
 .post-description {
-  padding: 35px 0 20px;
-  font-size: 25px;
+  padding: 15px 10px 20px;
+  font-size: 2vw;
   text-align: center;
 }
 .news-1,
 .news-2 {
   background: #fff;
+  margin: 0 0 10px;
 }
 .title-2 {
   padding: 20px 30px 0;
 }
 .text-2 {
+  color: #162b4d;
   font-size: 15px;
   padding: 10px 30px 30px;
   line-height: 20px;
 }
-#contact {
+.contact {
   line-height: 25px;
   background: #162b4d;
   text-align: center;
   margin: 35px 0 5px;
   padding: 40px 10px;
+}
+.blog {
+  display: flex;
+  flex-direction: column;
+}
+.post-description {
+  display: flex;
+  flex-direction: column;
+}
+img {
+  height: 100%;
+  width: 100%;
 }
 
 @media screen and (max-width: 480px) {
@@ -117,28 +136,34 @@ h3 {
   .main-wrapper {
     position: relative;
   }
-}
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .menu {
-    display: none;
+  .header {
+    flex-direction: column;
+    padding: 30px 0;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+  .post-description {
+    margin-top: 20px;
   }
   .main-wrapper {
     display: flex;
+    flex-direction: column;
   }
 }
 
 @media screen and (min-width: 769px) {
   .main {
-    position: relative;
+    width: 89%;
     margin: 0 auto;
   }
-  .menu {
-    position: absolute;
-    right: 70px;
+  .menu a {
+    display: inline-block;
+    padding: 30px 10px;
   }
   .menu a:hover {
-    color: #b8b8b8;
+    background: #283d5f;
   }
   .hamburger {
     display: none;
@@ -149,14 +174,70 @@ h3 {
   article {
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
-    margin: 5px 0;
-    padding: 0 80px;
   }
   article:nth-child(odd) {
     flex-direction: row;
   }
-  img {
-    width: 50%;
+  .post-content, .archive {
+    display: flex;
+    flex: 1;
+    cursor: pointer;
+  }
+  article img {
+    width: 100%;
+  }
+  .about {
+    margin-left: 10px;
+    min-width: 260px;
+    max-width: 25%;
+  }
+  footer .contact {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .copyright {
+  text-align: left;
+  }
+  footer .text-right {
+    text-align: left;
+  }
+  .archive {
+    display: flex;
+  }
+  .archive div {
+    padding: 0 30px 40px;
+  }
+  article:nth-child(even) .post-content {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+  .main-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .header {
+    flex-direction: column;
+    padding: 30px 0;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+  .post-description {
+    margin-top: 20px;
+  }
+  .post-content {
+    min-height: 678px;
+  }
+  .about {
+    margin-left: 10px;
+    min-width: 260px;
+    max-width: 25%;
   }
 }
