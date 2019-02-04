@@ -4,34 +4,34 @@ const c = parseFloat(prompt('Please enter c for quadratic equation ax2 + bx + c 
 
 const d = b * b - 4 * a * c;
 
-let x1 = 'no solution';
-let x2 = 'no solution';
+let value1 = 'no solution';
+let value2 = 'no solution';
 
 if (isNaN(a) || isNaN(b) || isNaN(c)) {
   alert('Invalid input data');
   } else
 if (a === 0 && b === 0 && c === 0) {
-  x1 = 'any number';
-  x2 = 'any number';
+  value1 = 'any number';
+  value2 = value1;
   } else
-if (a === 0 && b ===0 && c !== 0) {
-  x1 = 'no solution';
-  x2 = 'no solution';
+if (a === 0 && b === 0 && c !== 0) {
+  value1 = 'no solution';
+  value2 = value1;
   } else
 if (a === 0 && b !== 0 && c !== 0) {
-  x1 = - c / b;
-  x2 = x1;
+  value1 = - c / b;
+  value2 = ' ';
+  alert('x = ' + value1);
  } else
 if (a !== 0 && d > 0) {
-  x1 = (- b + Math.sqrt(d))/(2 * a);
-  x2 = (- b - Math.sqrt(d))/(2 * a);
+  value1 = (- b + Math.sqrt(d))/(2 * a);
+  value2 = (- b - Math.sqrt(d))/(2 * a);
   } else
 if (a !== 0 && d === 0) {
-  x1 = (- b) / ( 2 * a );
-  x2 = x1;
+  value1 = (- b) / ( 2 * a );
+  value2 = value1;
   } else
 if (d < 0) {
-  x1 = 'no solution';
-  x2 = 'no solution';
+  value1 = 'no solution';
 }
-alert(x1, x2)
+alert('x1 = ' + value1 + ' and x2 =' + value2)
