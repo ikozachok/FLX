@@ -9,34 +9,27 @@ let x2 = 'no solution';
 
 if (isNaN(a) || isNaN(b) || isNaN(c)) {
   alert('Invalid input data');
-}
-else
-if (a == 0 && b == 0 && c == 0) {
+  } else
+if (a === 0 && b === 0 && c === 0) {
   x1 = 'any number';
   x2 = 'any number';
-}
-else
-if(a==0 && b==0 && c!=0)
-{
+  } else
+if (a === 0 && b ===0 && c !== 0) {
   x1 = 'no solution';
   x2 = 'no solution';
-}
-else
-if (a == 0 && b != 0 && c != 0) {
+  } else
+if (a === 0 && b !== 0 && c !== 0) {
   x1 = - c / b;
   x2 = x1;
-}
-else
-if (a != 0 && d > 0) {
+ } else
+if (a !== 0 && d > 0) {
   x1 = (- b + Math.sqrt(d))/(2 * a);
   x2 = (- b - Math.sqrt(d))/(2 * a);
-}
-else
-if (a != 0 && d == 0) {
+  } else
+if (a !== 0 && d === 0) {
   x1 = (- b) / ( 2 * a );
   x2 = x1;
-}
-else
+  } else
 if (d < 0) {
   x1 = 'no solution';
   x2 = 'no solution';
