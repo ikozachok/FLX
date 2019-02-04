@@ -41,4 +41,4 @@ if (d < 0) {
   x1 = 'no solution';
   x2 = 'no solution';
 }
-console.log(x1, x2)
+alert(x1, x2)

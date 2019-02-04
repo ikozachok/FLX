@@ -11,5 +11,5 @@ if (amount >= 0 && discount <= 100) {
     'Saved: ' + saved
   );
 } else {
-  console.log('Invalid input data');
+  alert('Invalid input data');
 }
