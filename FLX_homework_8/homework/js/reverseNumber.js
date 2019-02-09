@@ -16,3 +16,7 @@ function reverseNumber(number) {
   let result = number > 0 ? strRevert : '-' + strRevert;
   return result;
 }
+
+reverseNumber(123);
+reverseNumber(-456);
+reverseNumber(10000);

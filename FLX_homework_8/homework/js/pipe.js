@@ -1,12 +1,15 @@
-function pipe(){
-  let addOne = arguments[0];
+function pipe(value) {
   for (let i = 1; i < arguments.length; i++) {
-    if (arguments[i] = addOne)
-    addOne += arguments[0];
+    if (typeof arguments[i] === 'function'){
+      value = arguments[i](value);
+    }
   }
-  return addOne;
+  return value;
 }
 
 function addOne(x) {
   return x + 1;
 }
+
+pipe(1, addOne);
+pipe(1, addOne, addOne);
